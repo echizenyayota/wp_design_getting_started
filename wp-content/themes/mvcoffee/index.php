@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="./img/touch-icon.png" />
   <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
-  <link rel="stylesheet" href="./css/app.css"/>
+
+  <?php wp_head(); ?>
 
   <!--[if lt IE 9]>
   <meta http-equiv="Imagetoolbar" content="no" />
