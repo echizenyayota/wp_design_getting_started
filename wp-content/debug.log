@@ -1,1 +1,2 @@
 [02-Jan-2017 09:43:24 UTC] PHP Warning:  不明なエラーが発生しました。WordPress.org またはこのサーバーの設定に何か問題が起きている可能性があります。問題が解決しない場合は<a href="https://ja.wordpress.org/support/">サポートフォーラム</a>に投稿してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/wordpress/wp-includes/update.php on line 320
+[03-Jan-2017 23:54:47 UTC] PHP Parse error:  syntax error, unexpected ';' in /var/www/wordpress/wp-content/themes/mvcoffee/index.php on line 55

@@ -52,7 +52,7 @@
     <div class="mainvisual ">
       <div class="container page-title">
 
-        <h2 class="font-serif text-right"><img src="./img/img-home-mainvisual-effect.png" alt="HOME VISUAL" /></h2>
+        <h2 class="font-serif text-right"><img src="<?php echo esc_url(get_template_directory_uri()); ?>)/img/img-home-mainvisual-effect.png" alt="HOME VISUAL" /></h2>
 
       </div>
     </div>
