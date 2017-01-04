@@ -35,12 +35,12 @@
             <div class="collapse" id="globalnav-collapse">
               <ul class="global-nav__list clearfix">
 
-                <li><a href="<?php echo esc_url(home_url()); ?><?php echo esc_url(home_url()); ?>"><span class="icon icon-home"></span>HOME</a></li>
+                <li><a href="<?php echo esc_url(home_url()); ?>"><span class="icon icon-home"></span>HOME</a></li>
                 <li><a href="<?php echo esc_url(home_url('/news')); ?>"><span class="icon icon-news"></span>NEWS</a></li>
                 <li><a href="<?php echo esc_url(home_url('/menu')); ?>"><span class="icon icon-menu"></span>MENU</a></li>
                 <li><a href="<?php echo esc_url(home_url('/access')); ?>"><span class="icon icon-access"></span>ACCESS</a></li>
-                <li><a href="./gallery.html"><span class="icon icon-gallery"></span>GALLERY</a></li>
-                <li><a href="./blog.html"><span class="icon icon-blog"></span>BLOG</a></li>
+                <li><a href="<?php echo esc_url(home_url('/gallery')); ?>"><span class="icon icon-gallery"></span>GALLERY</a></li>
+                <li><a href="<?php echo esc_url(home_url('/blog')); ?>"><span class="icon icon-blog"></span>BLOG</a></li>
 
               </ul>
             </div>
