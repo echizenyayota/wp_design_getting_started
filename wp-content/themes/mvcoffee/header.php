@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3">
-          <h1 class="header-logo text-hide"><a href="<?php echo esc_url(home_url()); ?>">Maverick Coffee</a></h1>
+          <h1 class="header-logo text-hide"><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 xs-no-gutter">
           <nav class="global-nav" role="navigation">
