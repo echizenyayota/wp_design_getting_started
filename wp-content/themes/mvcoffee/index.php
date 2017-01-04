@@ -73,28 +73,28 @@
         <ul class="home-nav__list row list-unstyled">
           <li class="home-nav__cafe col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-cafe"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo ecc_url(home_url('/menu#menu-cafe')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-cafe" class="text-hide">CAFE</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?>" class="text-hide">CAFE</a></h2>
               <p>シェフの焼く絶品のパンと、バリスタの入れるコーヒーでリフレッシュする贅沢をお楽しみください。</p>
             </div>
           </li>
           <li class="home-nav__lunch col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-lunch"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-lunch" class="text-hide">LUNCH</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>" class="text-hide">LUNCH</a></h2>
               <p>おいしい野菜を使った、元気になれるメニューがいっぱい！平日のランチはもちろん、お休みの日にも美味しいランチタイムをお楽しみください。</p>
             </div>
           </li>
           <li class="home-nav__dinner col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="./menu.html#menu-dinner"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
-              <h2><a href="./menu.html#menu-dinner" class="text-hide">DINNER</a></h2>
+              <h2><a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>" class="text-hide">DINNER</a></h2>
               <p>すべて直送で新鮮な食材で、四季折々の旬の味をお楽しみいただけます。本格的なお料理をゆっくりとご堪能ください。</p>
             </div>
           </li>
