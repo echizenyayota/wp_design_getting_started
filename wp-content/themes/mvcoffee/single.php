@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <body>
 <div id="wrapper">
 
