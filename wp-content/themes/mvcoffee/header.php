@@ -3,10 +3,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Maverick Coffee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="./img/touch-icon.png" />
-  <link rel="shortcut icon" href="./favicon.ico" />
 
   <?php wp_head(); ?>
 
