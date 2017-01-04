@@ -73,7 +73,7 @@
         <ul class="home-nav__list row list-unstyled">
           <li class="home-nav__cafe col-xs-12 col-sm-4">
             <div class="home-nav__thumbnail">
-              <a href="<?php echo ecc_url(home_url('/menu#menu-cafe')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
+              <a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?> "><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
             </div>
             <div class="home-nav__text">
               <h2><a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?>" class="text-hide">CAFE</a></h2>
