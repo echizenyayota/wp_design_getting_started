@@ -11,8 +11,8 @@
 
   <!--[if lt IE 9]>
   <meta http-equiv="Imagetoolbar" content="no" />
-  <script src="/js/html5shiv.min.js"></script>
-  <script src="/js/respond.min.js"></script>
+  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/html5shiv.min.js"></script>
+  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/respond.min.js"></script>
   <![endif]-->
 
 </head>
