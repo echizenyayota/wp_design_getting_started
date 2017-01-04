@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Maverick Coffee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="./img/touch-icon.png" />
-  <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
-  <link rel="stylesheet" href="./css/app.css"/>
-
-  <!--[if lt IE 9]>
-  <meta http-equiv="Imagetoolbar" content="no" />
-  <script src="/js/html5shiv.min.js"></script>
-  <script src="/js/respond.min.js"></script>
-  <![endif]-->
-
-</head>
 <body>
 <div id="wrapper">
 
