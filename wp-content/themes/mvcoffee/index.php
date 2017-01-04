@@ -1,5 +1,4 @@
-
-
+<?php get_header(); ?>
 
   <main id="wrap-container" role="main">
 
