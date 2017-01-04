@@ -14,7 +14,7 @@
   <![endif]-->
 
 </head>
-<body>
+<body class="body_class(); ?>">
 <div id="wrapper">
 
   <header id="header" class="header">
