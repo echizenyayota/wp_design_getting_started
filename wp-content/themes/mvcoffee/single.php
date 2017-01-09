@@ -60,13 +60,17 @@
 
             <?php while (have_post the_post() : ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' );?>>
-              <header class="entry-header">
-                <h1 class="entry-title"><?php the_title(); ?></h1>
-                <div class="entry-thumbnail">
-                  <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
-                </div>
-              </header>
+              <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' );?>>
+                <header class="entry-header">
+                  <h1 class="entry-title"><?php the_title(); ?></h1>
+                  <?php if (has_post_thumbnail(); ?>
+                    <div class="entry-thumbnail">
+                    <?php the_post_thumbnail(post_thumanail, array('class' => 'img-thumbnail img-responsive', 'alt' => the_title_attribute('echo=0'), 'title' => the_title_attribute('echo=0'))); ?>
+                    <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
+                  </div>
+                </header>
+
+              <?php enfdif; >
               <div class="entry-content clearfix">
                 <p>８月の新メニューが登場しました！</p>
                 <p>ランチタイムには季節の野菜をふんだんに使ったパニーニのＡセットが ￥８００円！ぜひこの機会にお召し上がりください～！</p>
