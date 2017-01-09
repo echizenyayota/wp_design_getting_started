@@ -58,8 +58,9 @@
         <main id="main-col" class="col-xs-12 col-md-9" role="main">
           <div class="main-col__inner">
 
+            <?php while (have_post the_post() : ?>
 
-            <article class="entry hentry">
+            <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' );?>>
               <header class="entry-header">
                 <h1 class="entry-title">８月 新メニューのお知らせ</h1>
                 <div class="entry-thumbnail">
