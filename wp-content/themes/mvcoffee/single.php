@@ -58,41 +58,34 @@
         <main id="main-col" class="col-xs-12 col-md-9" role="main">
           <div class="main-col__inner">
 
-            <?php while (have_post the_post() : ?>
-
+            <?php while (have_post()) :  the_post();?>
+ :
               <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' );?>>
                 <header class="entry-header">
                   <h1 class="entry-title"><?php the_title(); ?></h1>
-                  <?php if (has_post_thumbnail(); ?>
+                  <?php if (has_post_thumbnail()): ?>
                     <div class="entry-thumbnail">
-                    <?php the_post_thumbnail(post_thumanail, array('class' => 'img-thumbnail img-responsive', 'alt' => the_title_attribute('echo=0'), 'title' => the_title_attribute('echo=0'))); ?>
-                    <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
-                  </div>
-                </header>
+                      <?php the_post_thumbnail('post_thumbnail', array(
+                        'class' => 'img-thumbnail img-responsive',
+                        'alt' => the_title_attribute('echo=0'),
+                        'title' => the_title_attribute('echo=0')
+                      )); ?>
+                      <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
+                    </div>
 
-              <?php enfdif; >
+                  <?php endif; ?>
+                </header>
               <div class="entry-content clearfix">
-                <p>８月の新メニューが登場しました！</p>
-                <p>ランチタイムには季節の野菜をふんだんに使ったパニーニのＡセットが ￥８００円！ぜひこの機会にお召し上がりください～！</p>
-                <p>パニーニはフレッシュレタスと大人気のイタリアンハムを使用しました。使用しているパンの塩加減と甘さがとても相性良く、まさにランチタイムにぴったりなものとなっております。</p>
-                <p>お次は大人気のムーをご紹介します！</p>
-                <h2>ムーを使用したフレンチトースト</h2>
-                <p><img class="alignleft" src="./img/demo/img-post-001.jpg" alt=""/></p>
-                <p>大人気のフレンチトーストですが、こちらの人気の理由をご紹介します♪</p>
-                <p>外側はこんがりデニッシュのような食感で、中はタマゴが染みこんでとろとろ！大きさはそんなにありませんが、とても食べ応えのある一品です！</p>
-                <p>しっかりとフレンチトーストの味がついているのでそのままでも美味しく召し上がれますが、はちみつをつけて食べてもまた美味しいです！</p>
-                <p>一度食べたら忘れられないフレンチトースト！<br/>
-                  作りたてのバターの風味と香りを是非お試し下さい！</p>
-              </div>
-              <footer class="entry-footer">
-                <div class="entry-meta text-right">
-                  <div class="entry-meta__time">
-                    <span class="glyphicon glyphicon-time"></span><span class="vcard author"><a href="#" class="fn">Maverick staff</a></span> at <time datetime="2000-01-01">2000/00/00</time>
-                  </div>
-                  <div class="entry-meta__tag">
-                    <span class="glyphicon glyphicon-tag"></span>
-                    <span><a href="#" rel="tag">menu</a></span><span><a href="#" rel="tag">おすすめ</a><a href="#" rel="tag">ランチ</a></span>
-                  </div>
+                <?php the_content();
+                      wp_link_pages(array(
+                        'before' =>'<div class="entry__page-links">',
+                        'after' => '</div>',
+                        'link_before' => '<span class="btn btn-default">',
+                        'link_after' => '</span>',
+                        'pagelink' => '%ページ',
+                        'separator' => '',
+                      ));
+                ?>
                 </div>
               </footer>
             </article>
