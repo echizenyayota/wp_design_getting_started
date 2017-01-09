@@ -62,7 +62,7 @@
 
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' );?>>
               <header class="entry-header">
-                <h1 class="entry-title">８月 新メニューのお知らせ</h1>
+                <h1 class="entry-title"><?php the_title(); ?></h1>
                 <div class="entry-thumbnail">
                   <img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/>
                 </div>
