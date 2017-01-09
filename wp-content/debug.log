@@ -2,3 +2,7 @@
 [03-Jan-2017 23:54:47 UTC] PHP Parse error:  syntax error, unexpected ';' in /var/www/wordpress/wp-content/themes/mvcoffee/index.php on line 55
 [04-Jan-2017 00:35:45 UTC] PHP Parse error:  syntax error, unexpected '"><img src="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /var/www/wordpress/wp-content/themes/mvcoffee/index.php on line 76
 [04-Jan-2017 00:35:52 UTC] PHP Parse error:  syntax error, unexpected '"><img src="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /var/www/wordpress/wp-content/themes/mvcoffee/index.php on line 76
+[09-Jan-2017 04:26:49 UTC] PHP Fatal error:  Call to undefined function language_attribute() in /var/www/wordpress/wp-content/themes/mvcoffee/header.php on line 4
+[09-Jan-2017 04:28:09 UTC] PHP Fatal error:  Call to undefined function blog_info() in /var/www/wordpress/wp-content/themes/mvcoffee/header.php on line 4
+[09-Jan-2017 04:28:51 UTC] PHP Fatal error:  Call to undefined function blog_info() in /var/www/wordpress/wp-content/themes/mvcoffee/header.php on line 4
+[09-Jan-2017 04:28:59 UTC] PHP Fatal error:  Call to undefined function blog_info() in /var/www/wordpress/wp-content/themes/mvcoffee/header.php on line 4
