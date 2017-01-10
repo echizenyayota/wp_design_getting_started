@@ -96,8 +96,8 @@
 
             <nav class="prevnext-nav">
               <ul class="list-inline clearfix">
-                <li class="prevnext-nav__left pull-left"><a class="text-left font-serif" href="#">PREV</a></li>
-                <li class="prevnext-nav__right pull-right"><a class="text-right font-serif" href="#">NEXT</a></li>
+                <li class="prevnext-nav__left pull-left"><?php previous_post_link('%link', 'PREV'); ?></li>
+                <li class="prevnext-nav__right pull-right"><?php next_post_link('%link', 'NEXT'); ?></a></li>
               </ul>
             </nav>
             <?php endwhile; ?>
