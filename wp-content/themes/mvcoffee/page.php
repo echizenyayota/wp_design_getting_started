@@ -7,7 +7,7 @@
 
         <main id="main-col" class="col-xs-12 col-md-12" role="main">
           <div class="main-col__inner">
-
+            <?php while ( have_posts() ): the_post(); ?>
             <article class="page">
               <h1 class="entry-title">メニュー</h1>
               <div class="entry-content clearfix">
@@ -100,6 +100,7 @@
                 </div>
               </div>
             </article>
+          <?php endwhile; ?>
 
           </div>
         </main>
