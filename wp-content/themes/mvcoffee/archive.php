@@ -40,7 +40,7 @@
                     <?php if (has_tag()) : ?>
                       <div class="entry-meta__tag">
                         <span class="glyphicon glyphicon-tag"></span>
-                        <?php the_tags('<span>', '</span><span>', '<span>'); ?>
+                        <?php the_tags('<span>', '</span><span>', '</span>'); ?>
                       </div>
                     <?php endif; ?>
                   </footer>
