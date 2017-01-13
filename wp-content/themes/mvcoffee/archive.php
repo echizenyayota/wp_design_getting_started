@@ -10,15 +10,26 @@
 
             <?php if (have_posts()) : ?>
               <?php while( have_posts()) : the_post(); ?>
-                <article class="entry entry--excerpt entry--archive">
+                <article id="post-<?php the_ID();?>"<?php post_class('entry entry--excerpt entry--archive'); ?>>
                   <header>
-                    <h2 class="entry-title"><a href="./single.html" rel="bookmark">８月 新メニューのお知らせ</a></h2>
+                    <h2 class="entry-title"><a href="./single.html" rel="bookmark"><?php the_title(); ?></a></h2>
                   </header>
-                  <div class="entry-thumbnail">
-                    <a href="./single.html"><img src="./img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail img-responsive"/></a>
-                  </div>
+
+                  <?php if (has_post_thumbnail() ):?
+                    <div class="entry-thumbnail">
+                      <a href="./single.html">
+                      <?php
+                          the_post_thumbnail( 'post_thumbnail', array(
+                          'class' => 'img-thumbnail',
+                          'alt' => the_title_attribute('echo=0'),
+                          'title' => the_title_attributee('echo=0')
+                        )); ?>
+                      </a>
+                    </div>
+                  <?php endif; >
+
                   <div class="entry-content">
-                    <p>８月の新メニューが登場しました！ランチタイムには季節の野菜をふんだんに揃えたＡセットが…</p>
+                    <?php the_excerpt(); ?>
                   </div>
                   <footer class="entry-meta text-right">
                     <div class="entry-meta__time">
