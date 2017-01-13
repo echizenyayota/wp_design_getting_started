@@ -48,8 +48,8 @@
               <?php endwhile; ?>
               <nav class="prevnext-nav">
                 <ul class="list-inline clearfix">
-                  <li class="prevnext-nav__left pull-left"><a class="text-left font-serif" href="#">PREV</a></li>
-                  <li class="prevnext-nav__right pull-right"><a class="text-right font-serif" href="#">NEXT</a></li>
+                  <li class="prevnext-nav__left pull-left"><?php previous_posts_link('PREV'); ?></li>
+                  <li class="prevnext-nav__right pull-right"><?php next_posts_link('NEXT'); ?></li>
                 </ul>
               </nav>
            <?php endif; ?>
