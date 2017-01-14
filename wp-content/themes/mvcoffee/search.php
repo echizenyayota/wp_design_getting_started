@@ -46,6 +46,22 @@
                   </footer>
                 </article>
               <?php endwhile; ?>
+            <?php else: ?>
+              <section class="not-found">
+
+                <h1 class="not-found__title"><?php the_search_query(); ?>の結果が見つかりませんでした。</h1>
+
+                <p>お探しのページは一時的にアクセスができない状態にあるか、ページが移動もしくは削除されてしまった可能性があります。</p>
+                <p>以下の方法をお試し下さい。</p>
+                <ul>
+                  <li>アドレスを再入力する。</li>
+                  <li><a href="javascript:history.back();">前のページに戻る。</a></li>
+                  <li><a href="<?php echo esc_url( home_url() ); ?>">トップページに戻る</a></li>
+                  <li>下部の検索バーよりキーワード検索を試す。</li>
+                </ul>
+                <?php get_search_form(); ?>
+              </section>
+
               <nav class="prevnext-nav">
                 <ul class="list-inline clearfix">
                   <li class="prevnext-nav__left pull-left"><?php previous_posts_link('PREV'); ?></li>
