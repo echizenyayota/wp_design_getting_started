@@ -26,3 +26,4 @@
 [13-Jan-2017 10:49:10 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/wordpress/wp-content/themes/mvcoffee/content.php on line 48
 [14-Jan-2017 09:49:06 UTC] PHP Parse error:  syntax error, unexpected '}' in /var/www/wordpress/wp-content/themes/mvcoffee/sidebar.php on line 5
 [14-Jan-2017 09:49:25 UTC] PHP Fatal error:  Call to undefined function is_archive_sidebar() in /var/www/wordpress/wp-content/themes/mvcoffee/sidebar.php on line 3
+[14-Jan-2017 09:55:22 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
