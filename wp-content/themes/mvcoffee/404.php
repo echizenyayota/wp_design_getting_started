@@ -18,8 +18,9 @@
                 <li>アドレスを再入力する。</li>
                 <li><a href="javascript:history.back();">前のページに戻る。</a></li>
                 <li><a href="<?php echo esc_url( home_url ); ?>">トップページに戻る</a></li>
+                <li>下部の検索バーよりキーワード検索を試す</li>
               </ul>
-
+              <?php get_search_form(); ?>
             </section>
 
           </div>
