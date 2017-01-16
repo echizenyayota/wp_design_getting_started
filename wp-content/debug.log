@@ -34,3 +34,10 @@
 [14-Jan-2017 11:27:40 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /var/www/wordpress/wp-content/themes/mvcoffee/search.php on line 58
 [14-Jan-2017 11:32:29 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
 [16-Jan-2017 10:13:32 UTC] PHP Fatal error:  Call to undefined function the_permalin() in /var/www/wordpress/wp-content/themes/mvcoffee/front-page.php on line 85
+[16-Jan-2017 12:04:48 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:04:48 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:04:48 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:04:53 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:05:08 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:05:08 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
+[16-Jan-2017 12:05:08 UTC] PHP Notice:  Use of undefined constant home_url - assumed 'home_url' in /var/www/wordpress/wp-content/themes/mvcoffee/404.php on line 20
