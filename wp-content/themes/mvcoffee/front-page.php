@@ -51,7 +51,7 @@
           <?php
            $args = array(
              'category_name' => 'blog',
-             'post_per_page' =>4,
+             'post_per_page' => 4,
              'ignore_sticky_posts' => 1
            );
            $blog_posts = new WP_Query($args);
