@@ -1,185 +1,83 @@
 <?php get_header(); ?>
 
-  <main id="wrap-container" role="main">
+  <div id="wrap-container">
+    <div class="container">
+      <div class="row">
+        <main id="main-col" class="col-xs-12 col-md-9" role="main">
+          <div class="main-col__inner">
 
-    <nav id="home-nav" class="home-nav">
-      <div class="home-nav__title">
-        <h2 class="text-center font-serif">MENU</h2>
-      </div>
+            <?php if( have_posts() ): ?>
+              <?php while ( have_posts() ) : the_post(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
+                  <header class="entry-header">
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                    <?php if( has_post_thumbnail() ): ?>
+                      <div class="entry-thumbnail">
+                        <?php the_post_thumbnail( 'post-thumbnail', array( 'class' =>'img-thumbnail img-responsive', 'alt' => the_title_attribute( 'echo=0' ), 'title' => the_title_attribute( 'echo=0' ) ) ); ?>
+                      </div>
+                    <?php endif; ?>
+                  </header>
+                  <div class="entry-content clearfix">
+                    <?php
+                    the_content();
+                    wp_link_pages( array(
+                      'before' => '<div class="entry__page-links">',
+                      'after' => '</div>',
+                      'link_before' => '<span class="btn btn-default">',
+                      'link_after' => '</span>',
+                      'pagelink' => '%ページ',
+                      'separator' => '',
+                    ) );
+                    ?>
+                  </div>
+                  <footer class="entry-footer">
+                    <div class="entry-meta">
+                      <div class="entry-meta__time text-right">
+                        <span class="glyphicon glyphicon-time"></span><span class="vcard author"><a href="#" class="fn">Maverick staff</a></span> at <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time( 'Y/m/d' ); ?></time>
+                      </div>
+                      <?php if( has_tag() ): ?>
+                        <div class="entry-meta__tag">
+                          <span class="glyphicon glyphicon-tag"></span><?php the_tags( '<span>', '</span><span>', '</span>' ); ?>
+                        </div>
+                      <?php endif; ?>
+                    </div>
+                  </footer>
+                </article>
 
-      <div class="container">
-        <ul class="home-nav__list row list-unstyled">
-          <li class="home-nav__cafe col-xs-12 col-sm-4">
-            <div class="home-nav__thumbnail">
-              <a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?> "><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-cafe.jpg" alt="" class="img-responsive img-thumbnail"/></a>
-            </div>
-            <div class="home-nav__text">
-              <h2><a href="<?php echo esc_url(home_url('/menu#menu-cafe')); ?>" class="text-hide">CAFE</a></h2>
-              <p>シェフの焼く絶品のパンと、バリスタの入れるコーヒーでリフレッシュする贅沢をお楽しみください。</p>
-            </div>
-          </li>
-          <li class="home-nav__lunch col-xs-12 col-sm-4">
-            <div class="home-nav__thumbnail">
-              <a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-lunch.jpg" alt="" class="img-responsive img-thumbnail"/></a>
-            </div>
-            <div class="home-nav__text">
-              <h2><a href="<?php echo esc_url(home_url('/menu#menu-lunch')); ?>" class="text-hide">LUNCH</a></h2>
-              <p>おいしい野菜を使った、元気になれるメニューがいっぱい！平日のランチはもちろん、お休みの日にも美味しいランチタイムをお楽しみください。</p>
-            </div>
-          </li>
-          <li class="home-nav__dinner col-xs-12 col-sm-4">
-            <div class="home-nav__thumbnail">
-              <a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav-dinner.jpg" alt="" class="img-responsive img-thumbnail"/></a>
-            </div>
-            <div class="home-nav__text">
-              <h2><a href="<?php echo esc_url(home_url('/menu#menu-dinner')); ?>" class="text-hide">DINNER</a></h2>
-              <p>すべて直送で新鮮な食材で、四季折々の旬の味をお楽しみいただけます。本格的なお料理をゆっくりとご堪能ください。</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+                <nav class="prevnext-nav">
+                  <ul class="list-inline clearfix">
+                    <li class="prevnext-nav__left pull-left"><?php previous_post_link( '%link', 'PREV' ); ?></li>
+                    <li class="prevnext-nav__right pull-right"><?php next_post_link( '%link', 'NEXT' ); ?></li>
+                  </ul>
+                </nav>
 
-    <article id="home-postlist" class="home-postlist">
-      <div class="home-postlist__title">
-        <h2 class="text-center font-serif">BLOG</h2>
-      </div>
+              <?php endwhile; ?>
+            <?php else: ?>
 
-      <div class="container">
-        <div class="row">
+              <section class="not-found">
+                <h1 class="not-found__title">ページが見つかりませんでした</h1>
+                <p>お探しのページは一時的にアクセスができない状態にあるか、ページが移動もしくは削除されてしまった可能性があります。</p>
+                <p>以下の方法をお試し下さい。</p>
+                <ul>
+                  <li>アドレスを再入力する。</li>
+                  <li><a href="javascript:history.back();">前のページに戻る。</a></li>
+                  <li><a href="<?php echo esc_url( home_url() ); ?>">トップページに戻る</a></li>
+                  <li>下部の検索バーよりキーワード検索を試す。</li>
+                </ul>
+                <?php get_search_form(); ?>
+              </section>
 
-          <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
-            <div class="entry-thumbnail">
-              <a href="#"><span class="entry__new-mark">NEW</span><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-000.jpg" alt="" class="img-thumbnail"/></a>
-            </div>
-            <div class="entry-meta">
-              <div class="entry-meta__time">
-                <span class="glyphicon glyphicon-time"></span><time datetime="2015-09-01">2015/09/01</time>
-              </div>
-            </div>
-            <h2 class="entry-title"><a href="#">パニーニとエスプレッソ</a></h2>
-            <div class="entry-content">
-              <p>こんにちわ、MAVERICK CAFEです！今回は新たにイタリアンハムとレタスのパニーニをご紹介します！　パニーニセット　800yen　イタリアンハムとしゃきしゃきのレタスがアクセントになって美味しいくお召し上がり頂けます。ぜひ一度…</p>
-            </div>
-            <div class="entry-more"><a href="#"><span class="text-hide">続きを読む</span></a></div>
-          </section>
+            <?php endif; ?>
 
-          <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
-            <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-008.jpg" alt="" class="img-thumbnail"/></a>
-            </div>
-            <div class="entry-meta">
-              <div class="entry-meta__time">
-                <span class="glyphicon glyphicon-time"></span><time datetime="2015-08-02">2015/08/02</time>
-              </div>
-            </div>
-            <h2 class="entry-title"><a href="#">暑い夏の特製デザートゼリー</a></h2>
-            <div class="entry-content">
-              <p>こんにちわ、MAVERICK CAFEです！とても暑い日が続いておりますが、夏バテなどはしていませんか？そんな暑い夏にピッタリの、夏限定・冷たくてサッパリな特製デザートゼリーがおすすめです！</p>
-            </div>
-            <div class="entry-more"><a href="#"><span class="text-hide">続きを読む</span></a></div>
-          </section>
+          </div>
+        </main>
 
-          <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
-            <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-003.jpg" alt="" class="img-thumbnail"/></a>
-            </div>
-            <div class="entry-meta">
-              <div class="entry-meta__time">
-                <span class="glyphicon glyphicon-time"></span><time datetime="2015-04-12">2015/04/20</time>
-              </div>
-            </div>
-            <h2 class="entry-title"><a href="#">ＧＷの過ごし方</a></h2>
-            <div class="entry-content">
-              <p>とうとうやってきました、ゴールデンウィーク！待ちに待った連休で、遠出のご予定もあるのではないでしょうか？私はちょっと遅いゴールデンウィークを過ごす予定ですが、雑誌などで組まれている特集を見るとみてるだけで…</p>
-            </div>
-            <div class="entry-more"><a href="#"><span class="text-hide">続きを読む</span></a></div>
-          </section>
-
-          <section class="entry entry--simple entry--excerpt col-xs-12 col-sm-6">
-            <div class="entry-thumbnail">
-              <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/demo/img-postlist-004.jpg" alt="" class="img-thumbnail"/></a>
-            </div>
-            <div class="entry-meta">
-              <div class="entry-meta__time">
-                <span class="glyphicon glyphicon-time"></span><time datetime="2015-04-01">2015/04/01</time>
-              </div>
-            </div>
-            <h2 class="entry-title"><a href="#">歓迎会とパーティとワインと</a></h2>
-            <div class="entry-content">
-              <p>就職シーズンも過ぎ、歓迎会の季節がやってきましたね(^^) MAVERICK CAFEではディナータイムのお料理やお飲み物もご用意しておりますので、色んなシーンにご利用いただけます♪</p>
-            </div>
-            <div class="entry-more"><a href="#"><span class="text-hide">続きを読む</span></a></div>
-          </section>
-
+        <div id="sub-col" class="col-xs-12 col-md-3" role="complementary">
+          <?php get_sidebar(); ?>
         </div>
+
       </div>
-
-    </article>
-
-    <div id="home-utilities" class="home-utilities">
-      <div class="container">
-        <div class="row">
-
-          <article class="home-news col-xs-12 col-md-6">
-            <div class="home-utilities__title">
-              <h3 class="text-center font-serif">NEWS</h3>
-            </div>
-            <ul class="list-unstyled">
-              <li class="clearfix">
-                <div class="home-news__meta pull-left"><time datetime="2015-08-01">2015/08/01</time><span class="label label-warning"><a
-                        href="#">メニュー</a></span><span class="label label-warning"><a
-                        href="#">新商品</a></span></div>
-                <div class="home-news__content pull-right"><a href="#">８月の新メニューが登場しました！ランチタイムには季節の野菜をふんだんに揃えたＡセットが…</a></div>
-              </li>
-              <li class="clearfix">
-                <div class="home-news__meta pull-left"><time datetime="2015-07-08">2015/07/08</time><span class="label label-warning"><a
-                        href="#">お知らせ</a></span></div>
-                <div class="home-news__content pull-right"><a href="#">７月の定休日のお知らせです。第２水曜日を定休日とさせていただいております。</a></div>
-              </li>
-              <li class="clearfix">
-                <div class="home-news__meta pull-left"><time datetime="2015-07-04">2015/07/04</time><span class="label label-warning"><a
-                        href="#">メニュー</a></span><span class="label label-warning"><a
-                        href="#">新商品</a></span></div>
-                <div class="home-news__content pull-right"><a href="#">７月の新メニューが登場しました！中でも３種トマトの卵炒めはおすすめです！</a></div>
-              </li>
-              <li class="clearfix">
-                <div class="home-news__meta pull-left"><time datetime="2015-01-01">2015/06/06</time><span class="label label-warning"><a
-                        href="#">お知らせ</a></span></div>
-                <div class="home-news__content pull-right"><a href="#">６月の定休日のお知らせです。第２水曜日を定休日とさせていただいております。</a></div>
-              </li>
-              <li class="clearfix">
-                <div class="home-news__meta pull-left"><time datetime="2015-05-27">2015/05/27</time><span class="label label-warning"><a
-                        href="#">メニュー</a></span><span class="label label-warning"><a
-                        href="#">新商品</a></span></div>
-                <div class="home-news__content pull-right"><a href="#">ムーを使用したフレンチトーストの販売を開始しました！ぜひ出来たてをお召し上がりください。</a></div>
-              </li>
-            </ul>
-          </article>
-
-          <article class="home-map col-xs-12 col-md-6">
-            <div class="home-utilities__title">
-              <h3 class="text-center font-serif">ACCESS</h3>
-            </div>
-            <div class="home-map__img">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img-home-utilities__map.png" alt="" class="img-responsive" />
-            </div>
-            <address class="home-map__address address">
-              <p class="address__name">Maverick Coffee</p>
-              <p>東京都表参道１－１－１ <br/>
-                03-2382-2392</p>
-              <p><span class="label label-default">営業時間</span><br/>
-                10:00～21:00</p>
-              <p><span class="label label-default">定休日</span><br/>
-                毎週水曜日</p>
-            </address>
-          </article>
-
-        </div>
-      </div>
-
     </div>
+  </div>
 
-  </main>
-
-  <?php get_footer(); ?>
+<?php get_footer(); ?>
